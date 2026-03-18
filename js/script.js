@@ -146,12 +146,16 @@ function initLevel(levelIdx) {
     const levelKey = levelsOrder[currentLevelIndex];
     const levelData = allLevelsData[levelKey];
     
+    // Pegar apenas 6 itens aleatórios por nível para não poluir a tela
+    const maxItems = Math.min(6, levelData.length);
+    const shuffledSubset = [...levelData].sort(() => Math.random() - 0.5).slice(0, maxItems);
+    
     correctCountInLevel = 0;
-    totalItemsInLevel = levelData.length;
+    totalItemsInLevel = shuffledSubset.length;
     
     levelDisplay.innerText = levelNames[levelKey];
     scoreDisplay.innerText = score;
-    levelFeedback.innerText = `Nível ${levelNames[levelKey]} carregaodo!`;
+    levelFeedback.innerText = `Nível ${levelNames[levelKey]} carregado!`;
     levelFeedback.style.color = "var(--text-color)";
     
     nextLevelBtn.classList.add('hidden');
@@ -160,8 +164,7 @@ function initLevel(levelIdx) {
     document.querySelectorAll('.zone-content').forEach(el => el.innerHTML = '');
     itemsContainer.innerHTML = '';
     
-    const shuffled = [...levelData].sort(() => Math.random() - 0.5);
-    shuffled.forEach(item => {
+    shuffledSubset.forEach(item => {
         const el = document.createElement('div');
         el.classList.add('draggable-item');
         el.draggable = true;
@@ -406,6 +409,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 // --- LIGAÇÃO DE PALAVRAS (LINK TO WORDS) ---
 let lwData = [];
+let lwPlayableCount = 0;
 let lwSelectedLeft = null;
 let lwSelectedRight = null;
 let lwMatches = 0;
@@ -429,7 +433,7 @@ async function loadLinkWords() {
 
 function initLinkWords() {
     lwMatches = 0;
-    document.getElementById('lw-score').innerText = `0 / ${lwData.length}`;
+    
     document.getElementById('lw-feedback').innerText = '';
     lwLinesSvg.innerHTML = '';
     lwSelectedLeft = null;
@@ -440,8 +444,13 @@ function initLinkWords() {
     colLeft.innerHTML = '';
     colRight.innerHTML = '';
     
-    let leftArray = [...lwData].sort(() => 0.5 - Math.random());
-    let rightArray = [...lwData].sort(() => 0.5 - Math.random());
+    // Seleciona um subset aleatório de 5 pares (replayability sem poluir)
+    let playableData = [...lwData].sort(() => 0.5 - Math.random()).slice(0, 5);
+    lwPlayableCount = playableData.length;
+    document.getElementById('lw-score').innerText = `0 / ${lwPlayableCount}`;
+    
+    let leftArray = [...playableData].sort(() => 0.5 - Math.random());
+    let rightArray = [...playableData].sort(() => 0.5 - Math.random());
     
     leftArray.forEach(item => {
         const div = document.createElement('div');
@@ -503,20 +512,25 @@ function checkLwMatch() {
         lwSelectedRight.classList.add('matched');
         
         lwMatches++;
-        document.getElementById('lw-score').innerText = `${lwMatches} / ${lwData.length}`;
+        document.getElementById('lw-score').innerText = `${lwMatches} / ${lwPlayableCount}`;
         
-        if(lwMatches === lwData.length) {
+        if(lwMatches === lwPlayableCount) {
             document.getElementById('lw-feedback').innerText = "Excelente! Você conectou tudo perfeitamente! 🎉";
             document.getElementById('lw-feedback').style.color = "var(--success)";
         }
     } else {
-        lwSelectedLeft.classList.add('wrong');
-        lwSelectedRight.classList.add('wrong');
+        const leftNode = lwSelectedLeft;
+        const rightNode = lwSelectedRight;
+        leftNode.classList.add('wrong');
+        rightNode.classList.add('wrong');
+        
+        // Libera os cursores globais na mesma hora pra evitar bloqueio
+        lwSelectedLeft = null;
+        lwSelectedRight = null;
+        
         setTimeout(() => {
-            if(lwSelectedLeft) lwSelectedLeft.classList.remove('wrong', 'selected');
-            if(lwSelectedRight) lwSelectedRight.classList.remove('wrong', 'selected');
-            lwSelectedLeft = null;
-            lwSelectedRight = null;
+            leftNode.classList.remove('wrong', 'selected');
+            rightNode.classList.remove('wrong', 'selected');
         }, 500);
     }
     

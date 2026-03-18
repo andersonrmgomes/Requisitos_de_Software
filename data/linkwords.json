@@ -1,7 +1,22 @@
 [
-  { "id": "lw1", "left": "Regra de Negócio", "right": "Políticas e Restrições da Empresa" },
-  { "id": "lw2", "left": "Requisito Funcional", "right": "O que o sistema faz na prática" },
-  { "id": "lw3", "left": "Requisito Não Funcional", "right": "Como o sistema deve se comportar" },
-  { "id": "lw4", "left": "Acessibilidade (WCAG)", "right": "Atributo de Usabilidade" },
-  { "id": "lw5", "left": "ISO/IEC 25010", "right": "Padrão de Qualidade do Software" }
+  { "id": "lw1", "left": "Regra de Negócio", "right": "Políticas internas e restrições legais da empresa" },
+  { "id": "lw2", "left": "Requisito Funcional", "right": "O que o sistema deve fazer na prática" },
+  { "id": "lw3", "left": "Requisito Não Funcional", "right": "Critérios de qualidade física ou percepção do sistema" },
+  { "id": "lw4", "left": "Acessibilidade (WCAG)", "right": "Grau de abrangência inclusiva (PCDs)" },
+  { "id": "lw5", "left": "ISO/IEC 25010", "right": "Norma Internacional de Atributos de Qualidade" },
+  { "id": "lw6", "left": "Engenharia de Requisitos", "right": "Etapas de elicitar, analisar, especificar e validar" },
+  { "id": "lw7", "left": "Stakeholder", "right": "Cliente, usuário ou financiador interessado no software" },
+  { "id": "lw8", "left": "Elicitação", "right": "Técnica primária de extrair as necessidades dos usuários" },
+  { "id": "lw9", "left": "Casos de Uso (UML)", "right": "Cenários de interação entre o Ator e o Sistema" },
+  { "id": "lw10", "left": "Documento de Requisitos (SAD/DRS)", "right": "Artefato formal que age como contrato do produto" },
+  { "id": "lw11", "left": "Rastreabilidade", "right": "Capacidade de mapear um desejo até sua linha de código" },
+  { "id": "lw12", "left": "Manutenibilidade", "right": "Quão fácil um software é de sofrer refatoração e correções" },
+  { "id": "lw13", "left": "Portabilidade", "right": "Migrar o sistema de On-Premise para Nuvem Cloud" },
+  { "id": "lw14", "left": "Segurança da Informação", "right": "Pilares de confidencialidade com criptografia de ponta-a-ponta" },
+  { "id": "lw15", "left": "Confiabilidade", "right": "Resiliência a falhas ou garantia de estar sempre Online" },
+  { "id": "lw16", "left": "Desempenho (Performance)", "right": "Bons tempos de resposta para clicks e renderização" },
+  { "id": "lw17", "left": "Mockup e Wireframe", "right": "Processo de validar requisitos desenhando telas vazias" },
+  { "id": "lw18", "left": "CRUD", "right": "Quatro operações matemáticas essenciais de banco de dados" },
+  { "id": "lw19", "left": "LGPD", "right": "Proteção dos Direitos Fundamentais de Privacidade" },
+  { "id": "lw20", "left": "Validação", "right": "Comprovar que o produto construído atinge a expectativa" }
 ]

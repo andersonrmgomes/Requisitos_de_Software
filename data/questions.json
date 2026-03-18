@@ -3,35 +3,60 @@
     { "id": "e1", "text": "O sistema deve calcular o frete baseado no CEP do cliente.", "type": "rf" },
     { "id": "e2", "text": "O usuário deve poder redefinir sua senha com um link por email.", "type": "rf" },
     { "id": "e3", "text": "O sistema precisa estar disponível 24 horas por dia.", "type": "rnf" },
-    { "id": "e4", "text": "A cor de fundo do aplicativo deve ser atualizável.", "type": "rf" },
-    { "id": "e5", "text": "A interface deve ser responsiva e funcionar bem em celulares.", "type": "rnf" }
+    { "id": "e4", "text": "A cor de fundo do aplicativo deve ser atualizável pelo painel.", "type": "rf" },
+    { "id": "e5", "text": "A interface deve ser responsiva e funcionar em celulares pequenos.", "type": "rnf" },
+    { "id": "e6", "text": "Permitir a criação de um novo cadastro preenchendo o Nome e CPF.", "type": "rf" },
+    { "id": "e7", "text": "A página inicial deve demorar menos de 3 segundos para carregar.", "type": "rnf" },
+    { "id": "e8", "text": "Deverá existir um campo de pesquisa de produtos no cabeçalho.", "type": "rf" },
+    { "id": "e9", "text": "A senha não deve aparecer digitada na tela, e sim como asteriscos.", "type": "rnf" },
+    { "id": "e10", "text": "O cliente pode visualizar o seu histórico de compras passadas.", "type": "rf" }
   ],
   "medium": [
     { "id": "m1", "text": "O tempo de resposta do checkout não pode exceder 2 segundos.", "type": "rnf" },
     { "id": "m2", "text": "O software deve se conectar à API dos Correios para rastreio.", "type": "rf" },
-    { "id": "m3", "text": "A senha do usuário deve ser criptografada utilizando algoritmo bcrypt.", "type": "rnf" },
+    { "id": "m3", "text": "A senha do usuário deve ser salva no banco usando hash bcrypt.", "type": "rnf" },
     { "id": "m4", "text": "Deve ser possível exportar um relatório em PDF filtrado por datas.", "type": "rf" },
-    { "id": "m5", "text": "O sistema de banco de dados deve realizar backups automáticos.", "type": "rnf" }
+    { "id": "m5", "text": "O sistema de banco de dados deve realizar rotina de backups noturnos.", "type": "rnf" },
+    { "id": "m6", "text": "Na hora de agendar consulta, disparar um SMS garantindo confirmação.", "type": "rf" },
+    { "id": "m7", "text": "As mensagens de erro devem ser escritas com linguagem empática (Usabilidade).", "type": "rnf" },
+    { "id": "m8", "text": "O sistema terá um botão para deletar dados sob a legislação LGPD.", "type": "rf" },
+    { "id": "m9", "text": "O sistema legado do Windows deverá continuar fluindo sem refatorar views (Compatibilidade).", "type": "rnf" },
+    { "id": "m10", "text": "Os produtos adicionados ao carrinho sem compra deverão sumir em 2hrs.", "type": "rf" }
   ],
   "hard": [
-    { "id": "h1", "text": "O sistema web deve suportar 10.000 usuários simultâneos.", "type": "rnf" },
-    { "id": "h2", "text": "O carrinho deve salvar itens para posterior reconexão via LocalStorage.", "type": "rf" },
-    { "id": "h3", "text": "A aplicação web deve obedecer às diretrizes de acessibilidade WCAG 2.1.", "type": "rnf" },
-    { "id": "h4", "text": "A conta inativada deve ser um \"soft-delete\" retido no banco por 30 dias.", "type": "rf" },
-    { "id": "h5", "text": "A aplicação deve mudar para Multi-Replication automaticamente ao falhar.", "type": "rnf" }
+    { "id": "h1", "text": "O sistema web deve suportar 10.000 requisições simultâneas por segundo.", "type": "rnf" },
+    { "id": "h2", "text": "O carrinho deve salvar itens de abandonos para push-notification via ServiceWorker.", "type": "rf" },
+    { "id": "h3", "text": "A aplicação web deve obedecer todas às diretrizes de acessibilidade WCAG 2.1 AAA.", "type": "rnf" },
+    { "id": "h4", "text": "Contas inativadas entram em purga (soft-delete) e restauram tudo automaticamente se logar em 30d.", "type": "rf" },
+    { "id": "h5", "text": "O balanceador de carga mudará para réplicas caso a CPU atinja 90%.", "type": "rnf" },
+    { "id": "h6", "text": "Emissão de boletos registrados requer assinaturas criptográficas de chave-pública-privada do remetente.", "type": "rnf" },
+    { "id": "h7", "text": "Cálculos estaduais do ICMS aplicam-se com base na localização georreferenciada do momento da compra.", "type": "rf" },
+    { "id": "h8", "text": "A estrutura de deploy requer orquestração no Kubernetes e isolamento Docker (Instalabilidade).", "type": "rnf" },
+    { "id": "h9", "text": "Notificar fiscos governamentais automágicamente com os XMLs criptografados mensais.", "type": "rf" },
+    { "id": "h10", "text": "Os componentes Frontend devem possuir cobertura de Testes Unitários Jest >= 80%.", "type": "rnf" }
   ],
   "expert": [
-    { "id": "ex1", "text": "Apresentar dashboards gerenciais contendo gráficos interativos em tempo real.", "type": "rf" },
-    { "id": "ex2", "text": "A arquitetura deve utilizar microsserviços via Docker para manutenibilidade ágil.", "type": "rnf" },
-    { "id": "ex3", "text": "O portal deverá disparar Webhooks RESTful assim que um pedido mudar de sub-status.", "type": "rf" },
-    { "id": "ex4", "text": "O tempo médio entre falhas de software crítico (MTBF) deve ultrapassar 15.000h.", "type": "rnf" },
-    { "id": "ex5", "text": "Permitir aos super-admin criar papéis e permissões Role-Based Access Control (RBAC).", "type": "rf" }
+    { "id": "ex1", "text": "Apresentar dashboards gerenciais com Data-Lakes em tempo real via Websockets.", "type": "rf" },
+    { "id": "ex2", "text": "A arquitetura de software obedecerá aos princípios SOLID visando Clean Architecture (Manutenibilidade).", "type": "rnf" },
+    { "id": "ex3", "text": "O portal deverá disparar Webhooks abertos com JWT Token assim que ordens fecharem.", "type": "rf" },
+    { "id": "ex4", "text": "O tempo médio esperado entre falhas na usina termelétrica (MTBF) deve ultrapassar 15.000h.", "type": "rnf" },
+    { "id": "ex5", "text": "Camadas do IAM permitirão super-admins gerenciarem perfis baseados em Role-Based Access Control granular.", "type": "rf" },
+    { "id": "ex6", "text": "Os servidores devem trocar tráfego no protocolo gRPC otimizado bloqueando latência de parsers rest.", "type": "rnf" },
+    { "id": "ex7", "text": "Auditoria gera malha Blockchain imutável contra fraudes em edições de saldo bancário.", "type": "rf" },
+    { "id": "ex8", "text": "Logs do DataDog devem registrar métricas completas de instrumentação por requisição injetada.", "type": "rnf" },
+    { "id": "ex9", "text": "Máquina de estados transita a fatura do estorno reanalisando automaticamente saldo de antifraudes associados.", "type": "rf" },
+    { "id": "ex10", "text": "Para evitar vendor-lockin, os dados são document-oriented, portaveis pra MongoDB ou Cassandra sem reescrever.", "type": "rnf" }
   ],
   "master": [
-    { "id": "ms1", "text": "O sistema deve injetar assinaturas digitais avançadas ICP-Brasil PAdES.", "type": "rf" },
-    { "id": "ms2", "text": "A aplicação mobile de backoffice não conectada não pode consumir > 25MB de RAM.", "type": "rnf" },
-    { "id": "ms3", "text": "O código-fonte necessitará manter uma cobertura de rastreamento no mínimo 90% no SonarQube.", "type": "rnf" },
-    { "id": "ms4", "text": "O módulo contábil gera dezenas de blocos no layout estrito da RFB e SPED ECD para downloads.", "type": "rf" },
-    { "id": "ms5", "text": "Os nós do banco do cartório utilizam Multi-AZ Replication com persistência criptografada em trânsito.", "type": "rnf" }
+    { "id": "ms1", "text": "O sistema deve injetar assinaturas digitais avançadas formato ICP-Brasil PAdES nativamente no C++.", "type": "rf" },
+    { "id": "ms2", "text": "A inteligência de borda no app mobile offline não poderá exceder footprint de memória > 8MB heap.", "type": "rnf" },
+    { "id": "ms3", "text": "A esteira DevSecOps abortará pipeline no GitLabCI ao menor sinal de fuzzing falho de injeção SQL nativo.", "type": "rnf" },
+    { "id": "ms4", "text": "O módulo satélite interceptará pacotes NMEA do trator agrícola traçando correlação temporal no modelo preditivo.", "type": "rf" },
+    { "id": "ms5", "text": "Nodes de réplica em PostgreSQL adotam algoritmo Raft distribuído intercontinental ativo-ativo fail-over zero.", "type": "rnf" },
+    { "id": "ms6", "text": "Reconhecimento ótico via IA (OCR/MLP) processará carteiras de identidade para auto-aprovar KYC sub 50ms.", "type": "rf" },
+    { "id": "ms7", "text": "As chaves RSA do barramento KMS serão revogadas em 5 millisegundos se detectada anomalia geolocalizada suspeita.", "type": "rnf" },
+    { "id": "ms8", "text": "Agregador financeiro liquidará câmbio em transição SPB consolidada sem perder casas decimais binárias de float.", "type": "rf" },
+    { "id": "ms9", "text": "Toda stack tem obrigação de possuir Internacionalização Modular nativa em I18N sem duplicação estática (Adaptabilidade).", "type": "rnf" },
+    { "id": "ms10", "text": "O motor de inferência recomendará produtos cruzando Deep Learning colaborativo em Grafos Sociais abertos.", "type": "rf" }
   ]
 }

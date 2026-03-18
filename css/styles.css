@@ -209,16 +209,21 @@ main {
 }
 
 .draggable-item {
-    background: var(--bg-color); border: 1px solid var(--glass-border); padding: 0.7rem 1.4rem;
+    background: var(--bg-color); border: 1px solid var(--glass-border); padding: 0.5rem 1.2rem;
     border-radius: var(--radius-full); cursor: grab; user-select: none; font-weight: 500; font-size: 0.95rem;
     box-shadow: 0 2px 6px rgba(0,0,0,0.04); transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
     max-width: 100%; text-align: center;
+    /* Normalização de altura */
+    min-height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .theme-dark .draggable-item { border-color: rgba(255,255,255,0.15); }
 .draggable-item:hover { transform: translateY(-3px); box-shadow: 0 6px 15px rgba(0,0,0,0.08); border-color: var(--primary); }
 .draggable-item:active { cursor: grabbing; transform: scale(1.02); box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
 
-.drop-zone .draggable-item { border-radius: var(--radius-sm); font-size: 0.9rem; padding: 0.6rem 1rem; text-align: left; }
+.drop-zone .draggable-item { border-radius: var(--radius-sm); font-size: 0.9rem; padding: 0.6rem 1rem; text-align: justify; justify-content: flex-start; }
 .draggable-item.correct { background-color: var(--success); color: #fff; border-color: var(--success); cursor: default; animation: popIn var(--transition-bounce); }
 .draggable-item.wrong { animation: shake 0.5s ease-in-out; border-color: var(--error); color: var(--error); }
 
@@ -239,17 +244,22 @@ main {
 
 .col-left, .col-right { display: flex; flex-direction: column; gap: 1.5rem; z-index: 2; width: 42%; }
 .lw-node {
-    background: var(--glass-bg); border: 2px solid var(--glass-border); padding: 1rem 1.5rem;
+    background: var(--glass-bg); border: 2px solid var(--glass-border); padding: 0.7rem 1.2rem;
     border-radius: var(--radius-md); cursor: pointer; font-weight: 600; text-align: center;
     transition: all 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.05); position: relative;
+    /* Normalização de altura */
+    height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .lw-node:hover { transform: translateY(-2px); border-color: var(--primary); box-shadow: 0 6px 12px rgba(0,0,0,0.1); }
 .lw-node.selected { border-color: var(--primary); background: var(--primary); color: #fff; transform: scale(1.05); }
 .lw-node.matched { border-color: var(--success); background: var(--success); color: #fff; cursor: default; }
 .lw-node.wrong { animation: shake 0.4s ease-in-out; border-color: var(--error); background: var(--error); color: #fff; }
 
-.col-left .lw-node { text-align: right; }
-.col-right .lw-node { text-align: left; }
+.col-left .lw-node { text-align: center; justify-content: center; }
+.col-right .lw-node { text-align: center; justify-content: center; }
 
 /* Dynamic Feedback and Loadings */
 .loading-message { color: var(--text-muted); font-style: italic; width: 100%; text-align: center; margin-bottom: 2rem; }
