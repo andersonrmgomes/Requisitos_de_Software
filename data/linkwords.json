@@ -1,0 +1,7 @@
+[
+  { "id": "lw1", "left": "Regra de Negócio", "right": "Políticas e Restrições da Empresa" },
+  { "id": "lw2", "left": "Requisito Funcional", "right": "O que o sistema faz na prática" },
+  { "id": "lw3", "left": "Requisito Não Funcional", "right": "Como o sistema deve se comportar" },
+  { "id": "lw4", "left": "Acessibilidade (WCAG)", "right": "Atributo de Usabilidade" },
+  { "id": "lw5", "left": "ISO/IEC 25010", "right": "Padrão de Qualidade do Software" }
+]

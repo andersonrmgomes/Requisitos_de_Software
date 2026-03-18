@@ -1,0 +1,37 @@
+{
+  "easy": [
+    { "id": "e1", "text": "O sistema deve calcular o frete baseado no CEP do cliente.", "type": "rf" },
+    { "id": "e2", "text": "O usuário deve poder redefinir sua senha com um link por email.", "type": "rf" },
+    { "id": "e3", "text": "O sistema precisa estar disponível 24 horas por dia.", "type": "rnf" },
+    { "id": "e4", "text": "A cor de fundo do aplicativo deve ser atualizável.", "type": "rf" },
+    { "id": "e5", "text": "A interface deve ser responsiva e funcionar bem em celulares.", "type": "rnf" }
+  ],
+  "medium": [
+    { "id": "m1", "text": "O tempo de resposta do checkout não pode exceder 2 segundos.", "type": "rnf" },
+    { "id": "m2", "text": "O software deve se conectar à API dos Correios para rastreio.", "type": "rf" },
+    { "id": "m3", "text": "A senha do usuário deve ser criptografada utilizando algoritmo bcrypt.", "type": "rnf" },
+    { "id": "m4", "text": "Deve ser possível exportar um relatório em PDF filtrado por datas.", "type": "rf" },
+    { "id": "m5", "text": "O sistema de banco de dados deve realizar backups automáticos.", "type": "rnf" }
+  ],
+  "hard": [
+    { "id": "h1", "text": "O sistema web deve suportar 10.000 usuários simultâneos.", "type": "rnf" },
+    { "id": "h2", "text": "O carrinho deve salvar itens para posterior reconexão via LocalStorage.", "type": "rf" },
+    { "id": "h3", "text": "A aplicação web deve obedecer às diretrizes de acessibilidade WCAG 2.1.", "type": "rnf" },
+    { "id": "h4", "text": "A conta inativada deve ser um \"soft-delete\" retido no banco por 30 dias.", "type": "rf" },
+    { "id": "h5", "text": "A aplicação deve mudar para Multi-Replication automaticamente ao falhar.", "type": "rnf" }
+  ],
+  "expert": [
+    { "id": "ex1", "text": "Apresentar dashboards gerenciais contendo gráficos interativos em tempo real.", "type": "rf" },
+    { "id": "ex2", "text": "A arquitetura deve utilizar microsserviços via Docker para manutenibilidade ágil.", "type": "rnf" },
+    { "id": "ex3", "text": "O portal deverá disparar Webhooks RESTful assim que um pedido mudar de sub-status.", "type": "rf" },
+    { "id": "ex4", "text": "O tempo médio entre falhas de software crítico (MTBF) deve ultrapassar 15.000h.", "type": "rnf" },
+    { "id": "ex5", "text": "Permitir aos super-admin criar papéis e permissões Role-Based Access Control (RBAC).", "type": "rf" }
+  ],
+  "master": [
+    { "id": "ms1", "text": "O sistema deve injetar assinaturas digitais avançadas ICP-Brasil PAdES.", "type": "rf" },
+    { "id": "ms2", "text": "A aplicação mobile de backoffice não conectada não pode consumir > 25MB de RAM.", "type": "rnf" },
+    { "id": "ms3", "text": "O código-fonte necessitará manter uma cobertura de rastreamento no mínimo 90% no SonarQube.", "type": "rnf" },
+    { "id": "ms4", "text": "O módulo contábil gera dezenas de blocos no layout estrito da RFB e SPED ECD para downloads.", "type": "rf" },
+    { "id": "ms5", "text": "Os nós do banco do cartório utilizam Multi-AZ Replication com persistência criptografada em trânsito.", "type": "rnf" }
+  ]
+}

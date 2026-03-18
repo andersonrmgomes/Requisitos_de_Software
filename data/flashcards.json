@@ -1,0 +1,46 @@
+[
+  {
+    "front": "O que são Requisitos Funcionais (RF)?",
+    "back": "Descrevem as funcionalidades diretas e ações que o sistema deve executar (O que o sistema faz)."
+  },
+  {
+    "front": "O que são Requisitos Não Funcionais (RNF)?",
+    "back": "Descrevem restrições e atributos de qualidade, como desempenho, segurança e usabilidade (Como o sistema deve ser)."
+  },
+  {
+    "front": "Exemplo: 'O sistema deve calcular o valor do frete.'",
+    "back": "REQUISITO FUNCIONAL (RF)\nÉ uma função ou serviço tangível do sistema calculado na regra de negócio."
+  },
+  {
+    "front": "Exemplo: 'O site não deve demorar mais de 2 segundos para logar.'",
+    "back": "REQUISITO NÃO FUNCIONAL (RNF)\nÉ um atributo focado no Desempenho/Performance da requisição."
+  },
+  {
+    "front": "Quais são as principais divisões de RNF descritas nas normas (ISO/IEC)?",
+    "back": "Desempenho, Escalabilidade, Segurança, Usabilidade, Confiabilidade, Manutenibilidade e Portabilidade."
+  },
+  {
+    "front": "Verdadeiro ou Falso:\nRegras de negócio não são requisitos operacionais.",
+    "back": "FALSO.\nRegras de negócio frequentemente determinam os parâmetros e lógicas inseridas nos REQUISITOS FUNCIONAIS."
+  },
+  {
+    "front": "O que determina a Portabilidade (ISO 25010)?",
+    "back": "A facilidade com que o sistema pode ser rodado de um ambiente (dispositivos, sistemas operacionais) para outro (Ex: Android e iOS)."
+  },
+  {
+    "front": "O que determina a Manutenibilidade (ISO 25010)?",
+    "back": "A qualidade arquitetônica do código voltada à correção simplificada de falhas, adição de features ou adaptações sem quebrar o sistema."
+  },
+  {
+    "front": "Classifique:\n'O aplicativo não deve exceder 35MB ao ser baixado na Play Store.'",
+    "back": "REQUISITO NÃO FUNCIONAL (RNF) DE EFICIÊNCIA.\nRelacionado a restrições de infraestrutura física que limitam tamanho digital."
+  },
+  {
+    "front": "Diferencie:\nQual separa e detalha as restrições legais da empresa onde o aplicativo atua?",
+    "back": "REGRA DE NEGÓCIO.\nInfluenciam requisitos, mas focam unicamente no domínio da empresa. Ex: 'Mensalidade tem juro de 2% ao mês em atrasos'."
+  },
+  {
+    "front": "Requisito de Usabilidade avalia apenas aparências bonitas?\n(Sim ou Não)",
+    "back": "NÃO!\nBeleza é subjetiva. Requisito de Usabilidade foca em UX: Acessibilidade a PCDs via Leitores de Tela e baixa carga cognitiva para o uso efetivo."
+  }
+]

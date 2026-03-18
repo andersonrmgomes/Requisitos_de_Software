@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mestre dos Requisitos - Aprendizado Interativo</title>
+    <meta name="description" content="Aprenda a diferença entre requisitos através de Flashcards, Memória e Desafios.">
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+    
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body class="theme-light">
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+    
+    <header class="glass-header">
+        <div class="logo">
+            <i class="ph-fill ph-check-square-offset logo-icon"></i>
+            <h1>Mestre dos Requisitos</h1>
+        </div>
+        <div class="controls">
+            <button id="theme-toggle" aria-label="Alternar Tema Claro e Escuro" title="Alterar Tema">
+                <i class="ph ph-moon"></i>
+            </button>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section class="hero-section">
+            <div class="hero-content">
+                <h2>Aprenda Requisitos Brincando</h2>
+                <p>Navegue pelas diferentes abas de estudo para dominar Requisitos Funcionais e Não Funcionais.</p>
+            </div>
+        </section>
+
+        <!-- Navegação entre Modos -->
+        <nav class="game-nav glass-panel" aria-label="Modos de Estudo">
+            <button class="nav-btn active" data-target="section-theory" aria-pressed="true">
+                <i class="ph ph-book-open"></i> Teoria
+            </button>
+            <button class="nav-btn" data-target="section-flashcards" aria-pressed="false">
+                <i class="ph ph-cards"></i> Flashcards
+            </button>
+            <button class="nav-btn" data-target="section-challenge" aria-pressed="false">
+                <i class="ph ph-puzzle-piece"></i> Classificação
+            </button>
+            <button class="nav-btn" data-target="section-memory" aria-pressed="false">
+                <i class="ph ph-brain"></i> Memória
+            </button>
+            <button class="nav-btn" data-target="section-linkwords" aria-pressed="false">
+                <i class="ph ph-git-merge"></i> Liga-Pontos
+            </button>
+            <button class="nav-btn" data-target="section-3d" aria-pressed="false" id="btn-tab-3d">
+                <i class="ph ph-game-controller"></i> Grua 2D
+            </button>
+        </nav>
+
+        <!-- Seção 1: Teoria -->
+        <div id="section-theory" class="content-section learning-section">
+            <div class="card functional glass-panel">
+                <div class="card-icon" aria-hidden="true"><i class="ph-duotone ph-gear"></i></div>
+                <h3>Requisitos Funcionais (RF)</h3>
+                <p>Descrevem as funcionalidades concretas e serviços que o sistema deve fornecer aos usuários.</p>
+                <ul aria-label="Exemplos de Requisitos Funcionais">
+                    <li>Sistema deve permitir o cadastro de usuários.</li>
+                    <li>O usuário deve poder adicionar itens ao carrinho.</li>
+                </ul>
+            </div>
+
+            <div class="card non-functional glass-panel">
+                <div class="card-icon" aria-hidden="true"><i class="ph-duotone ph-shield-check"></i></div>
+                <h3>Requisitos Não Funcionais (RNF)</h3>
+                <p>Descrevem atributos de qualidade, restrições e características globais do sistema.</p>
+                <ul aria-label="Exemplos de Requisitos Não Funcionais">
+                    <li>O software deve carregar em menos de 2 segundos.</li>
+                    <li>Criptografia completa do banco de dados para segurança.</li>
+                </ul>
+            </div>
+            
+            <div class="iso-section glass-panel">
+                <div class="iso-header">
+                    <h3>Padrão de Qualidade: ISO/IEC 25010</h3>
+                    <p>Em Engenharia de Software, as características dos sistemas (especialmente os <strong>Requisitos Não Funcionais</strong>) são agrupadas e norteadas pelo modelo de qualidade internacional ISO/IEC 25010. Abaixo estão os 8 pilares principais:</p>
+                </div>
+                
+                <div class="iso-grid">
+                    <div class="iso-card">
+                        <i class="ph ph-check-circle"></i>
+                        <h4>Adequação Funcional</h4>
+                        <p>O grau com que o sistema satisfaz as necessidades declaradas sob condições especificadas (Cobertura, Correção e Adequação às tarefas).</p>
+                    </div>
+                    <div class="iso-card">
+                        <i class="ph ph-lightning"></i>
+                        <h4>Eficiência de Desempenho</h4>
+                        <p>Desempenho relativo à otimização da quantidade de recursos e tempo utilizados em condições ideais.</p>
+                    </div>
+                    <div class="iso-card">
+                        <i class="ph ph-plugs-connected"></i>
+                        <h4>Compatibilidade</h4>
+                        <p>Capacidade do produto de trocar informações com outros sistemas e compartilhar o mesmo ambiente sistêmico sem quebra.</p>
+                    </div>
+                    <div class="iso-card">
+                        <i class="ph ph-hand-pointing"></i>
+                        <h4>Usabilidade</h4>
+                        <p>Facilidade com que o sistema pode ser aprendido, operado e compreendido por usuários, incluindo sua Acessibilidade visual (UI) e UX.</p>
+                    </div>
+                    <div class="iso-card">
+                        <i class="ph ph-shield-check"></i>
+                        <h4>Confiabilidade</h4>
+                        <p>Frequência logada com que um sistema atinge o sucesso e opera sem falhas em um tempo específico de disponibilidade combinada.</p>
+                    </div>
+                    <div class="iso-card">
+                        <i class="ph ph-lock-key"></i>
+                        <h4>Segurança</h4>
+                        <p>Proteção rigorosa de informações para que os dados sensíveis sejam transmitidos apenas para sistemas ou pessoas autenticadas.</p>
+                    </div>
+                    <div class="iso-card">
+                        <i class="ph ph-wrench"></i>
+                        <h4>Manutenibilidade</h4>
+                        <p>Facilidade do código ser lido para que um software seja alterado, atualizado e testado prevenindo novos bugs.</p>
+                    </div>
+                    <div class="iso-card">
+                        <i class="ph ph-device-mobile"></i>
+                        <h4>Portabilidade</h4>
+                        <p>Eficácia, coesão estrutural e flexibilidade tecnológica em transferir a infraestrutura e instalação do sistema para outro ambiente de produção.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Seção 2: Flashcards -->
+        <div id="section-flashcards" class="content-section hidden-section gamification-section glass-panel">
+            <div class="game-header">
+                <h2>Estudo por Flashcards</h2>
+                <p>Clique no card para revelar a resposta. Memorize os conceitos antes dos desafios práticos!</p>
+            </div>
+            
+            <div id="fc-loading" class="loading-message">Carregando Flashcards...</div>
+            <div id="fc-error" class="loading-message error-msg hidden">Erro ao carregar Flashcards. Execute via servidor local.</div>
+
+            <div class="flashcard-container hidden" id="fc-container">
+                <div class="flashcard" id="current-flashcard" tabindex="0" aria-label="Flashcard de estudo. Pressione Enter para virar.">
+                    <div class="flashcard-inner">
+                        <div class="flashcard-front">
+                            <h3 id="fc-front-text">Frente</h3>
+                            <span class="click-hint"><i class="ph ph-hand-tap"></i> Clique para revelar</span>
+                        </div>
+                        <div class="flashcard-back">
+                            <h3 id="fc-back-text">Verso</h3>
+                            <span class="click-hint"><i class="ph ph-hand-tap"></i> Clique para voltar</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="game-actions hidden" id="fc-actions">
+                <button id="fc-prev" class="outline-btn"><i class="ph ph-arrow-left"></i> Anterior</button>
+                <span class="fc-counter"><strong id="fc-current-num">1</strong> / <span id="fc-total-num">-</span></span>
+                <button id="fc-next" class="outline-btn">Próximo <i class="ph ph-arrow-right"></i></button>
+            </div>
+        </div>
+
+        <!-- Seção 3: Jogo de Classificação Original -->
+        <div id="section-challenge" class="content-section hidden-section gamification-section glass-panel">
+            <div class="game-header">
+                <h2 id="game-title">Desafio de Classificação</h2>
+                <p>Navegue pelos níveis! Arraste ou clique nos requisitos para enviá-los à área correta.</p>
+            </div>
+            
+            <div class="score-board">
+                <div class="score-badge main-score">Pontos: <strong id="score" aria-live="polite">0</strong></div>
+                <div class="score-badge progress" id="level-display">Nível atual: <span>Carregando...</span></div>
+            </div>
+
+            <div class="game-container">
+                <div class="drop-zones">
+                    <div class="drop-zone" id="zone-rf" data-type="rf" tabindex="0" role="button" aria-label="Área para Funcionais">
+                        <h3>Funcionais (RF)</h3>
+                        <i class="ph ph-gear zone-icon"></i>
+                        <div class="zone-content"></div>
+                    </div>
+                    <div class="drop-zone" id="zone-rnf" data-type="rnf" tabindex="0" role="button" aria-label="Área para Não Funcionais">
+                        <h3>Não Funcionais (RNF)</h3>
+                        <i class="ph ph-shield-check zone-icon"></i>
+                        <div class="zone-content"></div>
+                    </div>
+                </div>
+
+                <div class="draggables-container" id="items-container" aria-label="Requisitos Pendentes" aria-live="polite">
+                    <p class="loading-message">Carregando requisitos... Por favor aguarde.</p>
+                </div>
+            </div>
+            
+            <div id="game-feedback" class="feedback-message" aria-live="assertive"></div>
+            
+            <div class="game-actions">
+                <button id="next-level-btn" class="hidden outline-btn">Avançar Nível <i class="ph-bold ph-arrow-right"></i></button>
+                <button id="restart-btn" class="hidden">Recomeçar Missão <i class="ph-bold ph-arrows-clockwise"></i></button>
+            </div>
+        </div>
+
+        <!-- Seção 4: Jogo da Memória -->
+        <div id="section-memory" class="content-section hidden-section gamification-section glass-panel">
+            <div class="game-header">
+                <h2>Jogo da Memória (ISO 25010)</h2>
+                <p>Associe o requisito de exemplo à respectiva Característica de Qualidade ISO correspondente!</p>
+            </div>
+            
+            <div class="score-board">
+                <div class="score-badge main-score">Tentativas: <strong id="memory-moves" aria-live="polite">0</strong></div>
+                <div class="score-badge progress">Pares: <strong id="memory-matches" aria-live="polite">0 / X</strong></div>
+            </div>
+
+            <div id="memory-loading" class="loading-message">Carregando Jogo da Memória...</div>
+            <div id="memory-error" class="loading-message error-msg hidden">Erro ao carregar dados. Use um Servidor Local.</div>
+            
+            <div class="memory-grid hidden" id="memory-grid" aria-label="Tabuleiro">
+                <!-- Cards gerados via JS -->
+            </div>
+            
+            <div id="memory-feedback" class="feedback-message" aria-live="assertive"></div>
+            
+            <div class="game-actions hidden" id="memory-actions">
+                <button id="memory-restart"><i class="ph ph-arrows-clockwise"></i> Reiniciar Jogo</button>
+            </div>
+        </div>
+
+        <!-- Seção 5: Liga-Pontos -->
+        <div id="section-linkwords" class="content-section hidden-section gamification-section glass-panel">
+            <div class="game-header">
+                <h2>Liga-Pontos de Conceitos</h2>
+                <p>Clique em um card da esquerda e logo após no seu correspondente da direita para formar conexões lógicas!</p>
+            </div>
+            
+            <div class="score-board">
+                <div class="score-badge main-score">Conexões Feitas: <strong id="lw-score" aria-live="polite">0 / 5</strong></div>
+            </div>
+
+            <div id="lw-loading" class="loading-message">Carregando Liga-Pontos...</div>
+            <div id="lw-error" class="loading-message error-msg hidden">Erro ao carregar dados JSON. Use Servidor Local.</div>
+            
+            <div class="linkwords-container hidden" id="lw-container">
+                <svg id="lw-lines" class="lines-overlay"></svg>
+                <div class="col-left" id="lw-col-left"></div>
+                <div class="col-right" id="lw-col-right"></div>
+            </div>
+            
+            <div id="lw-feedback" class="feedback-message" aria-live="assertive"></div>
+            
+            <div class="game-actions hidden" id="lw-actions">
+                <button id="lw-restart"><i class="ph ph-arrows-clockwise"></i> Tentar Novamente</button>
+            </div>
+        </div>
+
+        <!-- Seção 6: Grua 2D (Canvas) -->
+        <!-- Seção 6: Grua 2D -->
+        <div id="section-3d" class="content-section hidden-section gamification-section glass-panel" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+            <div class="game-header" style="padding: 2.5rem 1.5rem 1rem 1.5rem;">
+                <h2>Máquina Grua 2D</h2>
+                <p>Nossa grua agora usa pura renderização <strong>HTML5 Canvas 2D</strong>. Use os controles abaixo ou setas do teclado para alinhar a garra e apertar <strong>PEGAR</strong>!</p>
+            </div>
+            
+            <div style="padding: 0 1.5rem 1.5rem 1.5rem; display: flex; flex-direction: column; align-items: center; width: 100%;">
+                <!-- Painel de Missão (Gamificação) -->
+                <div style="width: 100%; background: var(--card-bg); color: var(--text-color); padding: 15px 25px; border-top-left-radius: 20px; border-top-right-radius: 20px; z-index: 5; text-align: justify; border: 1px solid var(--border-color); border-bottom: none;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; font-weight: bold; font-size: 14px; text-transform: uppercase;">
+                        <span style="color: var(--primary);">🎯 Alvo Estratégico</span>
+                        <span style="color: var(--warning); font-size: 16px;">Pontuação: <span id="claw-score-display">0</span></span>
+                    </div>
+                    <div id="claw-mission-text" style="font-size: 16px; font-weight: 500; line-height: 1.5; min-height: 48px; display: flex; flex-direction: column; justify-content: center;">Carregando missão...</div>
+                </div>
+                
+                <div style="width: 100%; height: 420px; position: relative; background: var(--bg-color); border-left: 1px solid var(--border-color); border-right: 1px solid var(--border-color);" id="claw-container">
+                    <canvas id="clawCanvas" style="width: 100%; height: 100%; touch-action: none; outline: none; border-bottom-left-radius: 0; border-bottom-right-radius: 0;"></canvas>
+                    
+                    <div id="claw-modal" class="hidden" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 330px; background: var(--card-bg); color: var(--text-color); border-radius: 16px; padding: 25px; box-shadow: 0 10px 40px rgba(0,0,0,0.6); z-index: 10; border: 1px solid var(--border-color); text-align: justify;">
+                        <button id="claw-close-btn" style="position: absolute; top: -14px; left: -14px; background: #ef4444; border: none; color: white; width: 36px; height: 36px; border-radius: 50%; cursor: pointer; font-weight: bold; font-size: 16px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); display: flex; align-items: center; justify-content: center; padding: 0;">X</button>
+                        <div id="claw-modal-text" style="margin-top: 5px; font-size: 16px; line-height: 1.6;"></div>
+                    </div>
+                </div>
+                
+                <div class="claw-joystick" style="width: 100%; display: flex; justify-content: center; align-items: center; gap: 20px; padding: 20px; background: var(--card-bg); border-bottom-left-radius: 20px; border-bottom-right-radius: 20px; border: 1px solid var(--border-color);">
+                    <button id="claw-left-btn" style="width: 60px; height: 60px; border-radius: 50%; border: none; background: var(--primary); color: white; font-size: 24px; cursor: pointer; box-shadow: 0 4px 0px rgba(0,0,0,0.2); display: flex; align-items: center; justify-content: center;" aria-label="Esquerda"><i class="ph ph-arrow-left"></i></button>
+                    <button id="claw-drop-btn" style="width: 100px; height: 100px; border-radius: 50%; border: 4px solid #ef4444; background: #f87171; color: white; font-weight: 800; font-size: 20px; cursor: pointer; box-shadow: 0 6px 0px rgba(0,0,0,0.2); text-transform: uppercase; transition: transform 0.1s; display: flex; align-items: center; justify-content: center;">PEGAR!</button>
+                    <button id="claw-right-btn" style="width: 60px; height: 60px; border-radius: 50%; border: none; background: var(--primary); color: white; font-size: 24px; cursor: pointer; box-shadow: 0 4px 0px rgba(0,0,0,0.2); display: flex; align-items: center; justify-content: center;" aria-label="Direita"><i class="ph ph-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>Desenvolvido para ensino interativo de Engenharia de Software.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

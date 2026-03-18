@@ -1,0 +1,14 @@
+[
+  { "id": "pe_ex", "matchId": "perf", "text": "Responder à ação do usuário em < 2s" },
+  { "id": "pe_nm", "matchId": "perf", "text": "Desempenho (Performance)" },
+  { "id": "sec_ex", "matchId": "sec", "text": "Senhas em base de dados com Hash seguro" },
+  { "id": "sec_nm", "matchId": "sec", "text": "Segurança" },
+  { "id": "us_ex", "matchId": "us", "text": "Acessibilidade para deficientes visuais (WCAG)" },
+  { "id": "us_nm", "matchId": "us", "text": "Usabilidade" },
+  { "id": "rel_ex", "matchId": "rel", "text": "Recuperar dados de backup 5min após falha" },
+  { "id": "rel_nm", "matchId": "rel", "text": "Confiabilidade" },
+  { "id": "mnt_ex", "matchId": "mnt", "text": "Arquitetura limpa para fácil modificação" },
+  { "id": "mnt_nm", "matchId": "mnt", "text": "Manutenibilidade" },
+  { "id": "prt_ex", "matchId": "prt", "text": "Execução garantida em Web, iOS e Android" },
+  { "id": "prt_nm", "matchId": "prt", "text": "Portabilidade" }
+]
